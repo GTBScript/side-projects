@@ -1,0 +1,10 @@
+#ifndef ASTEROIDBELT_UILABELS_H
+#define ASTEROIDBELT_UILABELS_H
+
+
+class UILabels {
+
+};
+
+
+#endif //ASTEROIDBELT_UILABELS_H

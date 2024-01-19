@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\rcybe\CLionProjects\AsteroidBelt\Sources\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rcybe\CLionProjects\AsteroidBelt\Sources\Actions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rcybe\CLionProjects\AsteroidBelt\Sources\Includes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rcybe\CLionProjects\AsteroidBelt\Sources\UIElements\UIButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rcybe\CLionProjects\AsteroidBelt\Sources\UIElements\StaticUIButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rcybe\CLionProjects\AsteroidBelt\Sources\UIElements\DynamicUIButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\rcybe\CLionProjects\AsteroidBelt\Sources\Actions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rcybe\CLionProjects\AsteroidBelt\Sources\Includes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rcybe\CLionProjects\AsteroidBelt\Sources\UIElements\UIButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rcybe\CLionProjects\AsteroidBelt\Sources\UIElements\StaticUIButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rcybe\CLionProjects\AsteroidBelt\Sources\UIElements\DynamicUIButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\rcybe\CLionProjects\AsteroidBelt\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{6B61FFAA-1C02-3C67-9759-96356A217DB7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{90CDBBBC-4426-3D26-BBE5-6BDD8F701ADA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

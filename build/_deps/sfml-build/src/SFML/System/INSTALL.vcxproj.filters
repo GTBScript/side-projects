@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\rcybe\CLionProjects\AsteroidBelt\build\CMakeFiles\9795f827b2b4defb8246037233c9263e\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{2B7E58A4-6720-38D1-AAD2-8C43AD815459}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

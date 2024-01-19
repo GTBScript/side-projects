@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/build/_deps/sfml-subbuild/CMakeFiles/sfml-populate"
+		},
+		{
+			"file" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/build/_deps/sfml-subbuild/CMakeFiles/e3494f55c7b9462042185192854139a9/sfml-populate.rule"
+		},
+		{
+			"file" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/build/_deps/sfml-subbuild/CMakeFiles/5a9afaa1b7fd0dbcc7fe2bc855cc8917/sfml-populate-complete.rule"
+		},
+		{
+			"file" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/build/_deps/sfml-subbuild/CMakeFiles/d3a7f2f2e70666430cdef139ac992a82/sfml-populate-build.rule"
+		},
+		{
+			"file" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/build/_deps/sfml-subbuild/CMakeFiles/d3a7f2f2e70666430cdef139ac992a82/sfml-populate-configure.rule"
+		},
+		{
+			"file" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/build/_deps/sfml-subbuild/CMakeFiles/d3a7f2f2e70666430cdef139ac992a82/sfml-populate-download.rule"
+		},
+		{
+			"file" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/build/_deps/sfml-subbuild/CMakeFiles/d3a7f2f2e70666430cdef139ac992a82/sfml-populate-install.rule"
+		},
+		{
+			"file" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/build/_deps/sfml-subbuild/CMakeFiles/d3a7f2f2e70666430cdef139ac992a82/sfml-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/build/_deps/sfml-subbuild/CMakeFiles/d3a7f2f2e70666430cdef139ac992a82/sfml-populate-patch.rule"
+		},
+		{
+			"file" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/build/_deps/sfml-subbuild/CMakeFiles/d3a7f2f2e70666430cdef139ac992a82/sfml-populate-test.rule"
+		},
+		{
+			"file" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/build/_deps/sfml-subbuild/CMakeFiles/d3a7f2f2e70666430cdef139ac992a82/sfml-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"sfml-populate"
+		],
+		"name" : "sfml-populate"
+	}
+}
