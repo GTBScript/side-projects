@@ -89,11 +89,11 @@
 			[
 				{
 					"backtrace" : 6,
-					"path" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps/sfml-src/include"
+					"path" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src/include"
 				},
 				{
 					"backtrace" : 6,
-					"path" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps/sfml-src/src"
+					"path" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src/src"
 				}
 			],
 			"language" : "CXX",

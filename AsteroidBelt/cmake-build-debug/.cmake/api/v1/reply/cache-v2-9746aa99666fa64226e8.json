@@ -11,7 +11,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug"
+			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug"
 		},
 		{
 			"name" : "AsteroidBelt_IS_TOP_LEVEL",
@@ -35,7 +35,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt"
+			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt"
 		},
 		{
 			"name" : "BUILD_SHARED_LIBS",
@@ -103,7 +103,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug"
+			"value" : "c:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -623,7 +623,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -695,7 +695,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt"
+			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt"
 		},
 		{
 			"name" : "CMAKE_INSTALL_BINDIR",
@@ -1739,7 +1739,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps"
+			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps"
 		},
 		{
 			"name" : "FETCHCONTENT_FULLY_DISCONNECTED",
@@ -1811,7 +1811,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/libs-mingw/x86/libFLAC.a][C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/headers][v()]"
+			"value" : "[C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/libs-mingw/x86/libFLAC.a][C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/headers][v()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_OpenAL",
@@ -1823,7 +1823,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/libs-mingw/x86/libopenal32.a][C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/headers/AL][v()]"
+			"value" : "[C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/libs-mingw/x86/libopenal32.a][C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/headers/AL][v()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_OpenGL",
@@ -1847,7 +1847,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/libs-mingw/x86/libvorbisenc.a;C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/libs-mingw/x86/libvorbisfile.a;C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/libs-mingw/x86/libvorbis.a;C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/libs-mingw/x86/libogg.a][C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/headers][C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/headers][v()]"
+			"value" : "[C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/libs-mingw/x86/libvorbisenc.a;C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/libs-mingw/x86/libvorbisfile.a;C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/libs-mingw/x86/libvorbis.a;C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/libs-mingw/x86/libogg.a][C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/headers][C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/headers][v()]"
 		},
 		{
 			"name" : "FLAC_INCLUDE_DIR",
@@ -1863,7 +1863,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/headers"
+			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/headers"
 		},
 		{
 			"name" : "FLAC_LIBRARY",
@@ -1879,7 +1879,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/libs-mingw/x86/libFLAC.a"
+			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/libs-mingw/x86/libFLAC.a"
 		},
 		{
 			"name" : "FREETYPE_INCLUDE_DIR_freetype2",
@@ -1895,7 +1895,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/headers/freetype2"
+			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/headers/freetype2"
 		},
 		{
 			"name" : "FREETYPE_INCLUDE_DIR_ft2build",
@@ -1911,7 +1911,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/headers/freetype2"
+			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/headers/freetype2"
 		},
 		{
 			"name" : "FREETYPE_LIBRARY",
@@ -1927,7 +1927,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/libs-mingw/x86/libfreetype.a"
+			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/libs-mingw/x86/libfreetype.a"
 		},
 		{
 			"name" : "GIT_EXECUTABLE",
@@ -2007,7 +2007,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/headers"
+			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/headers"
 		},
 		{
 			"name" : "OGG_LIBRARY",
@@ -2023,7 +2023,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/libs-mingw/x86/libogg.a"
+			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/libs-mingw/x86/libogg.a"
 		},
 		{
 			"name" : "OPENAL_INCLUDE_DIR",
@@ -2039,7 +2039,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/headers/AL"
+			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/headers/AL"
 		},
 		{
 			"name" : "OPENAL_LIBRARY",
@@ -2055,7 +2055,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/libs-mingw/x86/libopenal32.a"
+			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/libs-mingw/x86/libopenal32.a"
 		},
 		{
 			"name" : "OPENGL_gl_LIBRARY",
@@ -2099,7 +2099,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps/sfml-build"
+			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-build"
 		},
 		{
 			"name" : "SFML_BUILD_AUDIO",
@@ -2231,7 +2231,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps/sfml-src"
+			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src"
 		},
 		{
 			"name" : "SFML_USE_STATIC_STD_LIBS",
@@ -2283,7 +2283,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/libs-mingw/x86/libvorbisenc.a"
+			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/libs-mingw/x86/libvorbisenc.a"
 		},
 		{
 			"name" : "VORBISFILE_LIBRARY",
@@ -2299,7 +2299,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/libs-mingw/x86/libvorbisfile.a"
+			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/libs-mingw/x86/libvorbisfile.a"
 		},
 		{
 			"name" : "VORBIS_INCLUDE_DIR",
@@ -2315,7 +2315,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/headers"
+			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/headers"
 		},
 		{
 			"name" : "VORBIS_LIBRARY",
@@ -2331,7 +2331,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/libs-mingw/x86/libvorbis.a"
+			"value" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src/extlibs/libs-mingw/x86/libvorbis.a"
 		},
 		{
 			"name" : "WARNINGS_AS_ERRORS",

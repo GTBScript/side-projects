@@ -993,8 +993,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug",
-		"source" : "C:/Users/rcybe/CLionProjects/AsteroidBelt"
+		"build" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug",
+		"source" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt"
 	},
 	"version" : 
 	{

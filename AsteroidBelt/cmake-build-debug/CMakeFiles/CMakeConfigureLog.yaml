@@ -28,7 +28,7 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
       
       The CXX compiler identification is GNU, found in:
-        C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdCXX/a.exe
+        C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdCXX/a.exe
       
   -
     kind: "try_compile-v1"
@@ -39,8 +39,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-7gygvo"
-      binary: "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-7gygvo"
+      source: "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-z5f53z"
+      binary: "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-z5f53z"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -49,10 +49,10 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-7gygvo'
+        Change Dir: 'C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-z5f53z'
         
-        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3.2/bin/ninja/win/x64/ninja.exe" -v cmTC_bbcdc
-        [1/2] C:\\mingw32\\bin\\c++.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_bbcdc.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/JetBrains/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp"
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3.2/bin/ninja/win/x64/ninja.exe" -v cmTC_069f8
+        [1/2] C:\\mingw32\\bin\\c++.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_069f8.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/JetBrains/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp"
         Using built-in specs.
         COLLECT_GCC=C:\\mingw32\\bin\\c++.exe
         OFFLOAD_TARGET_NAMES=nvptx-none
@@ -61,8 +61,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 13.1.0 (MinGW-W64 i686-msvcrt-posix-dwarf, built by Brecht Sanders) 
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_bbcdc.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'CMakeFiles/cmTC_bbcdc.dir/'
-         C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/cc1plus.exe -quiet -v -iprefix C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/ -D_REENTRANT C:/Program Files/JetBrains/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_bbcdc.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=pentiumpro -version -fdiagnostics-color=always -o C:\\Users\\rcybe\\AppData\\Local\\Temp\\cceg8bBO.s
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_069f8.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'CMakeFiles/cmTC_069f8.dir/'
+         C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/cc1plus.exe -quiet -v -iprefix C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/ -D_REENTRANT C:/Program Files/JetBrains/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_069f8.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=pentiumpro -version -fdiagnostics-color=always -o C:\\Users\\rcybe\\AppData\\Local\\Temp\\ccyqm1Jm.s
         GNU C++17 (MinGW-W64 i686-msvcrt-posix-dwarf, built by Brecht Sanders) version 13.1.0 (i686-w64-mingw32)
         	compiled by GNU C version 13.1.0, GMP version 6.2.1, MPFR version 4.2.0, MPC version 1.3.1, isl version isl-0.26-GMP
         
@@ -87,13 +87,13 @@ events:
          C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/include
         End of search list.
         Compiler executable checksum: b959d34ccbf4a539fcb9890271d0a72f
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_bbcdc.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'CMakeFiles/cmTC_bbcdc.dir/'
-         C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_bbcdc.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\rcybe\\AppData\\Local\\Temp\\cceg8bBO.s
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_069f8.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'CMakeFiles/cmTC_069f8.dir/'
+         C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_069f8.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\rcybe\\AppData\\Local\\Temp\\ccyqm1Jm.s
         GNU assembler version 2.40 (i686-w64-mingw32) using BFD version (Binutils for MinGW-W64 i686, built by Brecht Sanders) 2.40
         COMPILER_PATH=C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/;C:/mingw32/bin/../libexec/gcc/;C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/bin/
         LIBRARY_PATH=C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/;C:/mingw32/bin/../lib/gcc/;C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib/../lib/;C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../lib/;C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib/;C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_bbcdc.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'CMakeFiles/cmTC_bbcdc.dir/CMakeCXXCompilerABI.cpp.'
-        [2/2] cmd.exe /C "cd . && C:\\mingw32\\bin\\c++.exe  -v CMakeFiles/cmTC_bbcdc.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_bbcdc.exe -Wl,--out-implib,libcmTC_bbcdc.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_069f8.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'CMakeFiles/cmTC_069f8.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] cmd.exe /C "cd . && C:\\mingw32\\bin\\c++.exe  -v CMakeFiles/cmTC_069f8.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_069f8.exe -Wl,--out-implib,libcmTC_069f8.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
         Using built-in specs.
         COLLECT_GCC=C:\\mingw32\\bin\\c++.exe
         COLLECT_LTO_WRAPPER=C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/lto-wrapper.exe
@@ -105,9 +105,9 @@ events:
         gcc version 13.1.0 (MinGW-W64 i686-msvcrt-posix-dwarf, built by Brecht Sanders) 
         COMPILER_PATH=C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/;C:/mingw32/bin/../libexec/gcc/;C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/bin/
         LIBRARY_PATH=C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/;C:/mingw32/bin/../lib/gcc/;C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib/../lib/;C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../lib/;C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib/;C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_bbcdc.exe' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'cmTC_bbcdc.'
-         C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/collect2.exe -plugin C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/liblto_plugin.dll -plugin-opt=C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\rcybe\\AppData\\Local\\Temp\\ccOq8QnT.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pe -Bdynamic --large-address-aware -u ___register_frame_info -u ___deregister_frame_info -o cmTC_bbcdc.exe C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib/../lib/crt2.o C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/crtbegin.o -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0 -LC:/mingw32/bin/../lib/gcc -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib/../lib -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../lib -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_bbcdc.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_bbcdc.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/crtend.o
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_bbcdc.exe' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'cmTC_bbcdc.'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_069f8.exe' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'cmTC_069f8.'
+         C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/collect2.exe -plugin C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/liblto_plugin.dll -plugin-opt=C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\rcybe\\AppData\\Local\\Temp\\ccWQqxGq.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pe -Bdynamic --large-address-aware -u ___register_frame_info -u ___deregister_frame_info -o cmTC_069f8.exe C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib/../lib/crt2.o C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/crtbegin.o -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0 -LC:/mingw32/bin/../lib/gcc -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib/../lib -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../lib -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_069f8.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_069f8.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_069f8.exe' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'cmTC_069f8.'
         
       exitCode: 0
   -
@@ -147,10 +147,10 @@ events:
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: 'C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-7gygvo']
+        ignore line: [Change Dir: 'C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-z5f53z']
         ignore line: []
-        ignore line: [Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3.2/bin/ninja/win/x64/ninja.exe" -v cmTC_bbcdc]
-        ignore line: [[1/2] C:\\mingw32\\bin\\c++.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_bbcdc.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/JetBrains/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp"]
+        ignore line: [Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3.2/bin/ninja/win/x64/ninja.exe" -v cmTC_069f8]
+        ignore line: [[1/2] C:\\mingw32\\bin\\c++.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_069f8.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/JetBrains/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp"]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\mingw32\\bin\\c++.exe]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
@@ -159,8 +159,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 13.1.0 (MinGW-W64 i686-msvcrt-posix-dwarf  built by Brecht Sanders) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_bbcdc.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'CMakeFiles/cmTC_bbcdc.dir/']
-        ignore line: [ C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/cc1plus.exe -quiet -v -iprefix C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/ -D_REENTRANT C:/Program Files/JetBrains/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_bbcdc.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=pentiumpro -version -fdiagnostics-color=always -o C:\\Users\\rcybe\\AppData\\Local\\Temp\\cceg8bBO.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_069f8.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'CMakeFiles/cmTC_069f8.dir/']
+        ignore line: [ C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/cc1plus.exe -quiet -v -iprefix C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/ -D_REENTRANT C:/Program Files/JetBrains/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_069f8.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=pentiumpro -version -fdiagnostics-color=always -o C:\\Users\\rcybe\\AppData\\Local\\Temp\\ccyqm1Jm.s]
         ignore line: [GNU C++17 (MinGW-W64 i686-msvcrt-posix-dwarf  built by Brecht Sanders) version 13.1.0 (i686-w64-mingw32)]
         ignore line: [	compiled by GNU C version 13.1.0  GMP version 6.2.1  MPFR version 4.2.0  MPC version 1.3.1  isl version isl-0.26-GMP]
         ignore line: []
@@ -185,8 +185,8 @@ events:
         ignore line: [ C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: b959d34ccbf4a539fcb9890271d0a72f]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_bbcdc.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'CMakeFiles/cmTC_bbcdc.dir/']
-        ignore line: [ C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_bbcdc.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\rcybe\\AppData\\Local\\Temp\\cceg8bBO.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_069f8.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'CMakeFiles/cmTC_069f8.dir/']
+        ignore line: [ C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_069f8.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\rcybe\\AppData\\Local\\Temp\\ccyqm1Jm.s]
         ignore line: [GNU assembler version 2.40 (i686-w64-mingw32) using BFD version (Binutils for MinGW-W64 i686  built by Brecht Sanders) 2.40]
         ignore line: [COMPILER_PATH=C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/]
         ignore line: [C:/mingw32/bin/../libexec/gcc/]
@@ -197,8 +197,8 @@ events:
         ignore line: [C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../lib/]
         ignore line: [C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib/]
         ignore line: [C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_bbcdc.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'CMakeFiles/cmTC_bbcdc.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [[2/2] cmd.exe /C "cd . && C:\\mingw32\\bin\\c++.exe  -v CMakeFiles/cmTC_bbcdc.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_bbcdc.exe -Wl --out-implib libcmTC_bbcdc.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_069f8.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'CMakeFiles/cmTC_069f8.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] cmd.exe /C "cd . && C:\\mingw32\\bin\\c++.exe  -v CMakeFiles/cmTC_069f8.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_069f8.exe -Wl --out-implib libcmTC_069f8.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\mingw32\\bin\\c++.exe]
         ignore line: [COLLECT_LTO_WRAPPER=C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/lto-wrapper.exe]
@@ -217,13 +217,13 @@ events:
         ignore line: [C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../lib/]
         ignore line: [C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib/]
         ignore line: [C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_bbcdc.exe' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'cmTC_bbcdc.']
-        link line: [ C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/collect2.exe -plugin C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/liblto_plugin.dll -plugin-opt=C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\rcybe\\AppData\\Local\\Temp\\ccOq8QnT.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pe -Bdynamic --large-address-aware -u ___register_frame_info -u ___deregister_frame_info -o cmTC_bbcdc.exe C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib/../lib/crt2.o C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/crtbegin.o -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0 -LC:/mingw32/bin/../lib/gcc -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib/../lib -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../lib -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_bbcdc.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_bbcdc.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_069f8.exe' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'cmTC_069f8.']
+        link line: [ C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/collect2.exe -plugin C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/liblto_plugin.dll -plugin-opt=C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\rcybe\\AppData\\Local\\Temp\\ccWQqxGq.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pe -Bdynamic --large-address-aware -u ___register_frame_info -u ___deregister_frame_info -o cmTC_069f8.exe C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib/../lib/crt2.o C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/crtbegin.o -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0 -LC:/mingw32/bin/../lib/gcc -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib/../lib -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../lib -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_069f8.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_069f8.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/crtend.o]
           arg [C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/liblto_plugin.dll] ==> ignore
           arg [-plugin-opt=C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\rcybe\\AppData\\Local\\Temp\\ccOq8QnT.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\rcybe\\AppData\\Local\\Temp\\ccWQqxGq.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
@@ -252,7 +252,7 @@ events:
           arg [-u] ==> ignore
           arg [___deregister_frame_info] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_bbcdc.exe] ==> ignore
+          arg [cmTC_069f8.exe] ==> ignore
           arg [C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib/../lib/crt2.o]
           arg [C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/crtbegin.o] ==> obj [C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/crtbegin.o]
           arg [-LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0] ==> dir [C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0]
@@ -261,9 +261,9 @@ events:
           arg [-LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../lib] ==> dir [C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../lib]
           arg [-LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib] ==> dir [C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib]
           arg [-LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../..] ==> dir [C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../..]
-          arg [CMakeFiles/cmTC_bbcdc.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+          arg [CMakeFiles/cmTC_069f8.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_bbcdc.dll.a] ==> ignore
+          arg [libcmTC_069f8.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore
@@ -326,7 +326,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
       
       The C compiler identification is GNU, found in:
-        C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdC/a.exe
+        C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdC/a.exe
       
   -
     kind: "try_compile-v1"
@@ -337,22 +337,22 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-3p6nw0"
-      binary: "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-3p6nw0"
+      source: "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-p2hlfw"
+      binary: "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-p2hlfw"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
       CMAKE_EXE_LINKER_FLAGS: ""
       CMAKE_OSX_SYSROOT: ""
-      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps/sfml-src/cmake/CompilerOptionsOverride.cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src/cmake/CompilerOptionsOverride.cmake"
     buildResult:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-3p6nw0'
+        Change Dir: 'C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-p2hlfw'
         
-        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3.2/bin/ninja/win/x64/ninja.exe" -v cmTC_d004e
-        [1/2] C:\\mingw32\\bin\\gcc.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_d004e.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/JetBrains/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCCompilerABI.c"
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3.2/bin/ninja/win/x64/ninja.exe" -v cmTC_bbf25
+        [1/2] C:\\mingw32\\bin\\gcc.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_bbf25.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/JetBrains/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCCompilerABI.c"
         Using built-in specs.
         COLLECT_GCC=C:\\mingw32\\bin\\gcc.exe
         OFFLOAD_TARGET_NAMES=nvptx-none
@@ -361,8 +361,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 13.1.0 (MinGW-W64 i686-msvcrt-posix-dwarf, built by Brecht Sanders) 
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_d004e.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'CMakeFiles/cmTC_d004e.dir/'
-         C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/cc1.exe -quiet -v -iprefix C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/ -D_REENTRANT C:/Program Files/JetBrains/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_d004e.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=pentiumpro -version -fdiagnostics-color=always -o C:\\Users\\rcybe\\AppData\\Local\\Temp\\ccKm4kiB.s
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_bbf25.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'CMakeFiles/cmTC_bbf25.dir/'
+         C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/cc1.exe -quiet -v -iprefix C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/ -D_REENTRANT C:/Program Files/JetBrains/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_bbf25.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=pentiumpro -version -fdiagnostics-color=always -o C:\\Users\\rcybe\\AppData\\Local\\Temp\\cc1lp2nq.s
         GNU C17 (MinGW-W64 i686-msvcrt-posix-dwarf, built by Brecht Sanders) version 13.1.0 (i686-w64-mingw32)
         	compiled by GNU C version 13.1.0, GMP version 6.2.1, MPFR version 4.2.0, MPC version 1.3.1, isl version isl-0.26-GMP
         
@@ -381,13 +381,13 @@ events:
          C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/include
         End of search list.
         Compiler executable checksum: a648c41e27f97bffd47bb92dccca46f4
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_d004e.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'CMakeFiles/cmTC_d004e.dir/'
-         C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_d004e.dir/CMakeCCompilerABI.c.obj C:\\Users\\rcybe\\AppData\\Local\\Temp\\ccKm4kiB.s
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_bbf25.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'CMakeFiles/cmTC_bbf25.dir/'
+         C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_bbf25.dir/CMakeCCompilerABI.c.obj C:\\Users\\rcybe\\AppData\\Local\\Temp\\cc1lp2nq.s
         GNU assembler version 2.40 (i686-w64-mingw32) using BFD version (Binutils for MinGW-W64 i686, built by Brecht Sanders) 2.40
         COMPILER_PATH=C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/;C:/mingw32/bin/../libexec/gcc/;C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/bin/
         LIBRARY_PATH=C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/;C:/mingw32/bin/../lib/gcc/;C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib/../lib/;C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../lib/;C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib/;C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_d004e.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'CMakeFiles/cmTC_d004e.dir/CMakeCCompilerABI.c.'
-        [2/2] cmd.exe /C "cd . && C:\\mingw32\\bin\\gcc.exe  -v CMakeFiles/cmTC_d004e.dir/CMakeCCompilerABI.c.obj -o cmTC_d004e.exe -Wl,--out-implib,libcmTC_d004e.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_bbf25.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'CMakeFiles/cmTC_bbf25.dir/CMakeCCompilerABI.c.'
+        [2/2] cmd.exe /C "cd . && C:\\mingw32\\bin\\gcc.exe  -v CMakeFiles/cmTC_bbf25.dir/CMakeCCompilerABI.c.obj -o cmTC_bbf25.exe -Wl,--out-implib,libcmTC_bbf25.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
         Using built-in specs.
         COLLECT_GCC=C:\\mingw32\\bin\\gcc.exe
         COLLECT_LTO_WRAPPER=C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/lto-wrapper.exe
@@ -399,9 +399,9 @@ events:
         gcc version 13.1.0 (MinGW-W64 i686-msvcrt-posix-dwarf, built by Brecht Sanders) 
         COMPILER_PATH=C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/;C:/mingw32/bin/../libexec/gcc/;C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/bin/
         LIBRARY_PATH=C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/;C:/mingw32/bin/../lib/gcc/;C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib/../lib/;C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../lib/;C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib/;C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d004e.exe' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'cmTC_d004e.'
-         C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/collect2.exe -plugin C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/liblto_plugin.dll -plugin-opt=C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\rcybe\\AppData\\Local\\Temp\\cc2DkBjG.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pe -Bdynamic --large-address-aware -o cmTC_d004e.exe C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib/../lib/crt2.o C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/crtbegin.o -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0 -LC:/mingw32/bin/../lib/gcc -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib/../lib -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../lib -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_d004e.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_d004e.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/crtend.o
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d004e.exe' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'cmTC_d004e.'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_bbf25.exe' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'cmTC_bbf25.'
+         C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/collect2.exe -plugin C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/liblto_plugin.dll -plugin-opt=C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\rcybe\\AppData\\Local\\Temp\\ccDrRXIq.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pe -Bdynamic --large-address-aware -o cmTC_bbf25.exe C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib/../lib/crt2.o C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/crtbegin.o -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0 -LC:/mingw32/bin/../lib/gcc -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib/../lib -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../lib -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_bbf25.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_bbf25.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_bbf25.exe' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'cmTC_bbf25.'
         
       exitCode: 0
   -
@@ -435,10 +435,10 @@ events:
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: 'C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-3p6nw0']
+        ignore line: [Change Dir: 'C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-p2hlfw']
         ignore line: []
-        ignore line: [Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3.2/bin/ninja/win/x64/ninja.exe" -v cmTC_d004e]
-        ignore line: [[1/2] C:\\mingw32\\bin\\gcc.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_d004e.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/JetBrains/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCCompilerABI.c"]
+        ignore line: [Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3.2/bin/ninja/win/x64/ninja.exe" -v cmTC_bbf25]
+        ignore line: [[1/2] C:\\mingw32\\bin\\gcc.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_bbf25.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/JetBrains/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCCompilerABI.c"]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\mingw32\\bin\\gcc.exe]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
@@ -447,8 +447,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 13.1.0 (MinGW-W64 i686-msvcrt-posix-dwarf  built by Brecht Sanders) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_d004e.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'CMakeFiles/cmTC_d004e.dir/']
-        ignore line: [ C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/cc1.exe -quiet -v -iprefix C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/ -D_REENTRANT C:/Program Files/JetBrains/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_d004e.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=pentiumpro -version -fdiagnostics-color=always -o C:\\Users\\rcybe\\AppData\\Local\\Temp\\ccKm4kiB.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_bbf25.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'CMakeFiles/cmTC_bbf25.dir/']
+        ignore line: [ C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/cc1.exe -quiet -v -iprefix C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/ -D_REENTRANT C:/Program Files/JetBrains/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_bbf25.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=pentiumpro -version -fdiagnostics-color=always -o C:\\Users\\rcybe\\AppData\\Local\\Temp\\cc1lp2nq.s]
         ignore line: [GNU C17 (MinGW-W64 i686-msvcrt-posix-dwarf  built by Brecht Sanders) version 13.1.0 (i686-w64-mingw32)]
         ignore line: [	compiled by GNU C version 13.1.0  GMP version 6.2.1  MPFR version 4.2.0  MPC version 1.3.1  isl version isl-0.26-GMP]
         ignore line: []
@@ -467,8 +467,8 @@ events:
         ignore line: [ C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: a648c41e27f97bffd47bb92dccca46f4]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_d004e.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'CMakeFiles/cmTC_d004e.dir/']
-        ignore line: [ C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_d004e.dir/CMakeCCompilerABI.c.obj C:\\Users\\rcybe\\AppData\\Local\\Temp\\ccKm4kiB.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_bbf25.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'CMakeFiles/cmTC_bbf25.dir/']
+        ignore line: [ C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_bbf25.dir/CMakeCCompilerABI.c.obj C:\\Users\\rcybe\\AppData\\Local\\Temp\\cc1lp2nq.s]
         ignore line: [GNU assembler version 2.40 (i686-w64-mingw32) using BFD version (Binutils for MinGW-W64 i686  built by Brecht Sanders) 2.40]
         ignore line: [COMPILER_PATH=C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/]
         ignore line: [C:/mingw32/bin/../libexec/gcc/]
@@ -479,8 +479,8 @@ events:
         ignore line: [C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../lib/]
         ignore line: [C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib/]
         ignore line: [C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_d004e.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'CMakeFiles/cmTC_d004e.dir/CMakeCCompilerABI.c.']
-        ignore line: [[2/2] cmd.exe /C "cd . && C:\\mingw32\\bin\\gcc.exe  -v CMakeFiles/cmTC_d004e.dir/CMakeCCompilerABI.c.obj -o cmTC_d004e.exe -Wl --out-implib libcmTC_d004e.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_bbf25.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'CMakeFiles/cmTC_bbf25.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] cmd.exe /C "cd . && C:\\mingw32\\bin\\gcc.exe  -v CMakeFiles/cmTC_bbf25.dir/CMakeCCompilerABI.c.obj -o cmTC_bbf25.exe -Wl --out-implib libcmTC_bbf25.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\mingw32\\bin\\gcc.exe]
         ignore line: [COLLECT_LTO_WRAPPER=C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/lto-wrapper.exe]
@@ -499,13 +499,13 @@ events:
         ignore line: [C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../lib/]
         ignore line: [C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib/]
         ignore line: [C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d004e.exe' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'cmTC_d004e.']
-        link line: [ C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/collect2.exe -plugin C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/liblto_plugin.dll -plugin-opt=C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\rcybe\\AppData\\Local\\Temp\\cc2DkBjG.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pe -Bdynamic --large-address-aware -o cmTC_d004e.exe C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib/../lib/crt2.o C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/crtbegin.o -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0 -LC:/mingw32/bin/../lib/gcc -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib/../lib -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../lib -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_d004e.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_d004e.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_bbf25.exe' '-mtune=generic' '-march=pentiumpro' '-dumpdir' 'cmTC_bbf25.']
+        link line: [ C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/collect2.exe -plugin C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/liblto_plugin.dll -plugin-opt=C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\rcybe\\AppData\\Local\\Temp\\ccDrRXIq.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pe -Bdynamic --large-address-aware -o cmTC_bbf25.exe C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib/../lib/crt2.o C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/crtbegin.o -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0 -LC:/mingw32/bin/../lib/gcc -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib/../lib -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../lib -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib -LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_bbf25.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_bbf25.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/crtend.o]
           arg [C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/liblto_plugin.dll] ==> ignore
           arg [-plugin-opt=C:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/13.1.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\rcybe\\AppData\\Local\\Temp\\cc2DkBjG.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\rcybe\\AppData\\Local\\Temp\\ccDrRXIq.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_eh] ==> ignore
@@ -530,7 +530,7 @@ events:
           arg [-Bdynamic] ==> search dynamic
           arg [--large-address-aware] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_d004e.exe] ==> ignore
+          arg [cmTC_bbf25.exe] ==> ignore
           arg [C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib/../lib/crt2.o]
           arg [C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/crtbegin.o] ==> obj [C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/crtbegin.o]
           arg [-LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0] ==> dir [C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0]
@@ -539,9 +539,9 @@ events:
           arg [-LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../lib] ==> dir [C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../lib]
           arg [-LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib] ==> dir [C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../../../i686-w64-mingw32/lib]
           arg [-LC:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../..] ==> dir [C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/13.1.0/../../..]
-          arg [CMakeFiles/cmTC_d004e.dir/CMakeCCompilerABI.c.obj] ==> ignore
+          arg [CMakeFiles/cmTC_bbf25.dir/CMakeCCompilerABI.c.obj] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_d004e.dll.a] ==> ignore
+          arg [libcmTC_bbf25.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore
@@ -595,23 +595,23 @@ events:
     checks:
       - "Looking for sys/types.h"
     directories:
-      source: "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ml9y56"
-      binary: "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ml9y56"
+      source: "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-xj7hk4"
+      binary: "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-xj7hk4"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
       CMAKE_EXE_LINKER_FLAGS: ""
       CMAKE_OSX_SYSROOT: ""
-      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps/sfml-src/cmake/CompilerOptionsOverride.cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src/cmake/CompilerOptionsOverride.cmake"
     buildResult:
       variable: "HAVE_SYS_TYPES_H"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ml9y56'
+        Change Dir: 'C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-xj7hk4'
         
-        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3.2/bin/ninja/win/x64/ninja.exe" -v cmTC_7394d
-        [1/2] C:\\mingw32\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_7394d.dir/CheckIncludeFile.c.obj -c C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ml9y56/CheckIncludeFile.c
-        [2/2] cmd.exe /C "cd . && C:\\mingw32\\bin\\gcc.exe   CMakeFiles/cmTC_7394d.dir/CheckIncludeFile.c.obj -o cmTC_7394d.exe -Wl,--out-implib,libcmTC_7394d.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3.2/bin/ninja/win/x64/ninja.exe" -v cmTC_17289
+        [1/2] C:\\mingw32\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_17289.dir/CheckIncludeFile.c.obj -c C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-xj7hk4/CheckIncludeFile.c
+        [2/2] cmd.exe /C "cd . && C:\\mingw32\\bin\\gcc.exe   CMakeFiles/cmTC_17289.dir/CheckIncludeFile.c.obj -o cmTC_17289.exe -Wl,--out-implib,libcmTC_17289.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
   -
@@ -624,23 +624,23 @@ events:
     checks:
       - "Looking for stdint.h"
     directories:
-      source: "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1wiak0"
-      binary: "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1wiak0"
+      source: "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-b96mgx"
+      binary: "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-b96mgx"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
       CMAKE_EXE_LINKER_FLAGS: ""
       CMAKE_OSX_SYSROOT: ""
-      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps/sfml-src/cmake/CompilerOptionsOverride.cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src/cmake/CompilerOptionsOverride.cmake"
     buildResult:
       variable: "HAVE_STDINT_H"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1wiak0'
+        Change Dir: 'C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-b96mgx'
         
-        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3.2/bin/ninja/win/x64/ninja.exe" -v cmTC_74981
-        [1/2] C:\\mingw32\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_74981.dir/CheckIncludeFile.c.obj -c C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1wiak0/CheckIncludeFile.c
-        [2/2] cmd.exe /C "cd . && C:\\mingw32\\bin\\gcc.exe   CMakeFiles/cmTC_74981.dir/CheckIncludeFile.c.obj -o cmTC_74981.exe -Wl,--out-implib,libcmTC_74981.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3.2/bin/ninja/win/x64/ninja.exe" -v cmTC_0986d
+        [1/2] C:\\mingw32\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_0986d.dir/CheckIncludeFile.c.obj -c C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-b96mgx/CheckIncludeFile.c
+        [2/2] cmd.exe /C "cd . && C:\\mingw32\\bin\\gcc.exe   CMakeFiles/cmTC_0986d.dir/CheckIncludeFile.c.obj -o cmTC_0986d.exe -Wl,--out-implib,libcmTC_0986d.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
   -
@@ -653,23 +653,23 @@ events:
     checks:
       - "Looking for stddef.h"
     directories:
-      source: "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ne734i"
-      binary: "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ne734i"
+      source: "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-xeye33"
+      binary: "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-xeye33"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
       CMAKE_EXE_LINKER_FLAGS: ""
       CMAKE_OSX_SYSROOT: ""
-      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps/sfml-src/cmake/CompilerOptionsOverride.cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src/cmake/CompilerOptionsOverride.cmake"
     buildResult:
       variable: "HAVE_STDDEF_H"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ne734i'
+        Change Dir: 'C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-xeye33'
         
-        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3.2/bin/ninja/win/x64/ninja.exe" -v cmTC_4de4c
-        [1/2] C:\\mingw32\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_4de4c.dir/CheckIncludeFile.c.obj -c C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ne734i/CheckIncludeFile.c
-        [2/2] cmd.exe /C "cd . && C:\\mingw32\\bin\\gcc.exe   CMakeFiles/cmTC_4de4c.dir/CheckIncludeFile.c.obj -o cmTC_4de4c.exe -Wl,--out-implib,libcmTC_4de4c.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3.2/bin/ninja/win/x64/ninja.exe" -v cmTC_21806
+        [1/2] C:\\mingw32\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_21806.dir/CheckIncludeFile.c.obj -c C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-xeye33/CheckIncludeFile.c
+        [2/2] cmd.exe /C "cd . && C:\\mingw32\\bin\\gcc.exe   CMakeFiles/cmTC_21806.dir/CheckIncludeFile.c.obj -o cmTC_21806.exe -Wl,--out-implib,libcmTC_21806.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
   -
@@ -682,23 +682,23 @@ events:
     checks:
       - "Check size of void*"
     directories:
-      source: "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-lp9egc"
-      binary: "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-lp9egc"
+      source: "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-y652am"
+      binary: "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-y652am"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
       CMAKE_EXE_LINKER_FLAGS: ""
       CMAKE_OSX_SYSROOT: ""
-      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps/sfml-src/cmake/CompilerOptionsOverride.cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src/cmake/CompilerOptionsOverride.cmake"
     buildResult:
       variable: "HAVE_SIZEOF_VOID_PTR"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-lp9egc'
+        Change Dir: 'C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-y652am'
         
-        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3.2/bin/ninja/win/x64/ninja.exe" -v cmTC_694fc
-        [1/2] C:\\mingw32\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_694fc.dir/SIZEOF_VOID_PTR.c.obj -c C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-lp9egc/SIZEOF_VOID_PTR.c
-        [2/2] cmd.exe /C "cd . && C:\\mingw32\\bin\\gcc.exe   CMakeFiles/cmTC_694fc.dir/SIZEOF_VOID_PTR.c.obj -o cmTC_694fc.exe -Wl,--out-implib,libcmTC_694fc.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3.2/bin/ninja/win/x64/ninja.exe" -v cmTC_ec725
+        [1/2] C:\\mingw32\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_ec725.dir/SIZEOF_VOID_PTR.c.obj -c C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-y652am/SIZEOF_VOID_PTR.c
+        [2/2] cmd.exe /C "cd . && C:\\mingw32\\bin\\gcc.exe   CMakeFiles/cmTC_ec725.dir/SIZEOF_VOID_PTR.c.obj -o cmTC_ec725.exe -Wl,--out-implib,libcmTC_ec725.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
   -
@@ -709,24 +709,24 @@ events:
     checks:
       - "Looking for dinput.h"
     directories:
-      source: "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-m0dv36"
-      binary: "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-m0dv36"
+      source: "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-6xjy4i"
+      binary: "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-6xjy4i"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
       CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps/sfml-src/cmake/Modules/"
+      CMAKE_MODULE_PATH: "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src/cmake/Modules/"
       CMAKE_OSX_SYSROOT: ""
-      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps/sfml-src/cmake/CompilerOptionsOverride.cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src/cmake/CompilerOptionsOverride.cmake"
     buildResult:
       variable: "DINPUT_H_FOUND"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-m0dv36'
+        Change Dir: 'C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-6xjy4i'
         
-        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3.2/bin/ninja/win/x64/ninja.exe" -v cmTC_b6260
-        [1/2] C:\\mingw32\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_b6260.dir/CheckIncludeFile.c.obj -c C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-m0dv36/CheckIncludeFile.c
-        [2/2] cmd.exe /C "cd . && C:\\mingw32\\bin\\gcc.exe   CMakeFiles/cmTC_b6260.dir/CheckIncludeFile.c.obj -o cmTC_b6260.exe -Wl,--out-implib,libcmTC_b6260.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3.2/bin/ninja/win/x64/ninja.exe" -v cmTC_d77ec
+        [1/2] C:\\mingw32\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_d77ec.dir/CheckIncludeFile.c.obj -c C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-6xjy4i/CheckIncludeFile.c
+        [2/2] cmd.exe /C "cd . && C:\\mingw32\\bin\\gcc.exe   CMakeFiles/cmTC_d77ec.dir/CheckIncludeFile.c.obj -o cmTC_d77ec.exe -Wl,--out-implib,libcmTC_d77ec.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
 ...

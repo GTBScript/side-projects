@@ -212,7 +212,7 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/cmake-build-debug/_deps/sfml-src/include"
+					"path" : "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src/include"
 				}
 			],
 			"language" : "CXX",
@@ -245,7 +245,7 @@
 		},
 		{
 			"backtrace" : 3,
-			"id" : "sfml-network::@d7f79968b2699e7782cb"
+			"id" : "sfml-window::@5730451e331e3690ae65"
 		},
 		{
 			"backtrace" : 3,
@@ -253,7 +253,7 @@
 		},
 		{
 			"backtrace" : 3,
-			"id" : "sfml-window::@5730451e331e3690ae65"
+			"id" : "sfml-network::@d7f79968b2699e7782cb"
 		},
 		{
 			"backtrace" : 3,
