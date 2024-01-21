@@ -4,7 +4,6 @@
 #include "../UIElements/UIButtons/DynamicUIButton.h"
 #include "../UIElements/UIButtons/StaticUIButton.h"
 #include "../Includes.h"
-#include "MakeScene.h"
 
 
 class Scene {
@@ -28,8 +27,6 @@ protected:
 
     void run_background();
 public:
-    explicit Scene();
-
     void load();
     void exit();
     void set_background_music(const std::string & path);

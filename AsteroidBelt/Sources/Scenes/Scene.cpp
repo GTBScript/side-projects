@@ -100,6 +100,3 @@ void Scene::load() {
 void Scene::exit() {
 
 }
-
-Scene::Scene() {
-}

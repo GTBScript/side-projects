@@ -3,15 +3,16 @@
 #include "UIElements/UIButtons/StaticUIButton.h"
 #include "UIElements/UIButtons/DynamicUIButton.h"
 #include "Scenes/Scene.h"
+#include "Scenes/MakeScene.h"
 
 
 int main() {
     RenderWindow window (VideoMode(Internal::__WIN_WIDTH__, Internal::__WIN_HEIGHT__), "Asteroid Belt", Style::Titlebar | Style::Close);
     window.setFramerateLimit(Internal::__FRAME_RATE__);
 
-    std::stack<Scene> scene_focus;
+    std::stack<std::unique_ptr<Scene>> scene_focus;
 
-    Scene * main_menu = MakeScene::make_main_menu();
+    scene_focus.emplace(MakeScene::MakeMenu(window));
 
 
     while (window.isOpen()) {
@@ -38,7 +39,7 @@ int main() {
         }
 
         window.clear(Color::Black);
-        main_menu->load();
+        scene_focus.top()->load();
         window.display();
     }
 

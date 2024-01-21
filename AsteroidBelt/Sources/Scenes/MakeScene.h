@@ -8,7 +8,7 @@
 
 class MakeScene {
 public:
-    static Scene * make_main_menu();
+    static std::unique_ptr<Scene> MakeMenu(RenderWindow & window);
 };
 
 

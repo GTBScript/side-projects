@@ -11,10 +11,10 @@ FetchContent_Declare(SFML
 FetchContent_MakeAvailable(SFML)
 
 add_executable(AsteroidBelt Sources/main.cpp
-Sources/Actions.cpp
-Sources/Actions.h
-Sources/Includes.cpp
-Sources/Includes.h
+        Sources/Actions.cpp
+        Sources/Actions.h
+        Sources/Includes.cpp
+        Sources/Includes.h
         Sources/UIElements/UIButtons/UIButton.cpp
         Sources/UIElements/UIButtons/UIButton.h
         Sources/UIElements/UIButtons/StaticUIButton.cpp
