@@ -10,8 +10,7 @@ namespace Actions {
     extern void close(RenderWindow * window);
     extern void load_main_menu_logo(Texture & texture);
     extern void load_main_menu_music(Music * music);
-    extern void load_options();
-    extern void close_options();
+    extern void load_scene();
     extern std::vector<Texture> load_main_menu_background(Texture & texture, RenderWindow & window, Sprite & sprite);
 }
 

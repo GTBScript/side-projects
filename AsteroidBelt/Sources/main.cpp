@@ -2,18 +2,16 @@
 #include "UIElements/UIButtons/UIButton.h"
 #include "UIElements/UIButtons/StaticUIButton.h"
 #include "UIElements/UIButtons/DynamicUIButton.h"
+#include "Scenes/Scene.h"
 
 
 int main() {
     RenderWindow window (VideoMode(Internal::__WIN_WIDTH__, Internal::__WIN_HEIGHT__), "Asteroid Belt", Style::Titlebar | Style::Close);
     window.setFramerateLimit(Internal::__FRAME_RATE__);
 
-    StaticUIButton * button = new StaticUIButton();
-    button->assign_window(window);
-    button->set_hover_color(Color::Green);
-    button->set_press_color(Color::Red);
-    button->set_size({100, 100});
-    button->set_position({110.f, 110.f});
+    std::stack<Scene> scene_focus;
+
+    Scene * main_menu = MakeScene::make_main_menu();
 
 
     while (window.isOpen()) {
@@ -26,15 +24,12 @@ int main() {
                     break;
 
                 case Event::MouseMoved:
-                    button->hover();
                     break;
 
                 case Event::MouseButtonPressed:
-                    button->press();
                     break;
 
                 case Event::MouseButtonReleased:
-                    button->release();
                     break;
 
                 default:
@@ -43,13 +38,9 @@ int main() {
         }
 
         window.clear(Color::Black);
-        button->draw();
+        main_menu->load();
         window.display();
     }
-
-
-
-    delete button;
 
 
     return 0;

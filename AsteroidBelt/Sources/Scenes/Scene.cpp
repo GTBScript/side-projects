@@ -11,7 +11,6 @@ void Scene::set_background_music(const std::string & path) {
     }
 
     this->background_music->setLoop(true);
-    this->background_music->play();
 }
 
 
@@ -38,8 +37,8 @@ void Scene::set_animated_background(const std::string & path) {
     for (unsigned short i=0; i<40; i++) {
         Texture texture__;
 
-        if (!texture__.loadFromFile(path + std::to_string(i)+".png")) {
-            throw std::runtime_error("Error retrieving image " + std::to_string(i)+".png");
+        if (!texture__.loadFromFile(path + std::to_string(i)+".jpg")) {
+            throw std::runtime_error("Error retrieving image " + std::to_string(i)+".jpg");
         }
 
         this->background_gif.emplace_back(texture__);
@@ -51,6 +50,11 @@ void Scene::set_animated_background(const std::string & path) {
 
     if (!this->background_gif.empty()) {
         this->sprite->setTexture(this->background_gif[0]);
+        const Vector2u textureSize = this->background_gif[0].getSize();
+        const Vector2u windowSize = this->window->getSize();
+        const float scaleX = static_cast<float>(windowSize.x) / static_cast<float>(textureSize.x);
+        const float scaleY = static_cast<float>(windowSize.y) / static_cast<float>(textureSize.y);
+        this->sprite->setScale(scaleX, scaleY);
     }
 }
 
@@ -65,6 +69,8 @@ void Scene::run_background() {
         this->sprite->setTexture(this->background_gif[this->current_frame]);
         this->scene_clock->restart();
     }
+
+    this->window->draw(*this->sprite);
 }
 
 
@@ -74,10 +80,26 @@ void Scene::attach_window(RenderWindow & _window) {
 
 
 void Scene::load() {
+    if (!this->music_plays) {
+        this->background_music->play();
+        this->music_plays = true;
+    }
 
+    this->run_background();
+
+    for (UIButton *& button : this->buttons) {
+        button->draw();
+    }
+
+    for (Text & label : this->labels) {
+        this->window->draw(label);
+    }
 }
 
 
 void Scene::exit() {
 
+}
+
+Scene::Scene() {
 }

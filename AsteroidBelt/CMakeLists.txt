@@ -24,7 +24,9 @@ Sources/Includes.h
         Sources/Scenes/Scene.cpp
         Sources/Scenes/Scene.h
         Sources/UIElements/UILabels/UILabels.cpp
-        Sources/UIElements/UILabels/UILabels.h)
+        Sources/UIElements/UILabels/UILabels.h
+        Sources/Scenes/MakeScene.cpp
+        Sources/Scenes/MakeScene.h)
 target_link_libraries(AsteroidBelt PRIVATE sfml-graphics sfml-audio sfml-window sfml-network sfml-system)
 target_compile_features(AsteroidBelt PRIVATE cxx_std_23)
 

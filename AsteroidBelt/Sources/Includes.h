@@ -10,6 +10,7 @@
 #include <memory>
 #include <functional>
 #include <string>
+#include <stack>
 
 using namespace sf;
 
