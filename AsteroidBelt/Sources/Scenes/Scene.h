@@ -4,6 +4,7 @@
 #include "../UIElements/UIButtons/DynamicUIButton.h"
 #include "../UIElements/UIButtons/StaticUIButton.h"
 #include "../Includes.h"
+#include "../UIElements/UIImages/UIImage.h"
 
 
 class Scene {
@@ -13,9 +14,11 @@ private:
     bool music_plays = false;
 
 protected:
-    std::vector<UIButton *> buttons;
+    std::list<std::unique_ptr<UIButton>> buttons;
+    std::list<std::unique_ptr<UIImage>> images;
+
     std::vector<Texture> background_gif;
-    std::vector<Text> labels;
+    std::list<Text> labels;
 
     std::unique_ptr<Music>          background_music = nullptr;
     std::unique_ptr<Texture>        background_image = nullptr;
@@ -27,12 +30,19 @@ protected:
 
     void run_background();
 public:
+
     void load();
     void exit();
+    void hover();
+    void press();
+    void release();
     void set_background_music(const std::string & path);
     void set_background_image(const std::string & path);
     void set_animated_background(const std::string & path);
     void attach_window(RenderWindow & _window);
+    void add_button(std::unique_ptr<UIButton> & button);
+    void add_image(std::unique_ptr<UIImage> & texture);
+
 
 };
 

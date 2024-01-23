@@ -3,7 +3,7 @@
 #include "UIButton.h"
 
 class StaticUIButton : public UIButton {
-private:
+protected:
     std::unique_ptr<Color> base_color = nullptr;
     std::unique_ptr<Color> press_color = nullptr;
     std::unique_ptr<Text> text = nullptr;

@@ -26,7 +26,10 @@ add_executable(AsteroidBelt Sources/main.cpp
         Sources/UIElements/UILabels/UILabels.cpp
         Sources/UIElements/UILabels/UILabels.h
         Sources/Scenes/MakeScene.cpp
-        Sources/Scenes/MakeScene.h)
+        Sources/Scenes/MakeScene.h
+        Sources/UIElements/UIImages/UIImage.cpp
+        Sources/UIElements/UIImages/UIImage.h
+)
 target_link_libraries(AsteroidBelt PRIVATE sfml-graphics sfml-audio sfml-window sfml-network sfml-system)
 target_compile_features(AsteroidBelt PRIVATE cxx_std_23)
 

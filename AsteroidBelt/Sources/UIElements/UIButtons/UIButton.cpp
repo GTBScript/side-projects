@@ -36,12 +36,12 @@ void UIButton::set_hover_color(Color color) {
 }
 
 
-void UIButton::draw() {
+void UIButton::draw(void) {
     this->window->draw(*this->shape);
 }
 
 
-bool UIButton::is_mouse_over_shape() {
+bool UIButton::is_mouse_over_shape(void) const {
     const Vector2i mouse_pos = Mouse::getPosition(*this->window);
     return this->shape->getGlobalBounds().contains(static_cast<float>(mouse_pos.x), static_cast<float>(mouse_pos.y));
 }
@@ -52,12 +52,7 @@ void UIButton::assign_window(RenderWindow & _window) {
 }
 
 
-template <typename Func> void UIButton::set_action(Func f) {
-    this->action = [this, f](){f();};
-}
-
-
-void UIButton::execute() {
+void UIButton::execute(void) {
     if (this->action) {
         this->action();
     }
@@ -73,6 +68,15 @@ UIButton::~UIButton() {
     this->window = nullptr;
 }
 
-void UIButton::press() noexcept {}
-void UIButton::hover() noexcept {}
-void UIButton::release() noexcept {}
+
+void UIButton::set_texture(const std::string & texture_path) {
+    if (!this->texture) {
+        this->texture = std::make_unique<Texture>();
+    }
+
+    if (!this->texture->loadFromFile(texture_path)) {
+        throw std::runtime_error("Couldn't load the texture.");
+    }
+
+    this->shape->setTexture(&(*this->texture));
+}

@@ -11,6 +11,7 @@
 #include <functional>
 #include <string>
 #include <stack>
+#include <list>
 
 using namespace sf;
 

@@ -1,6 +1,6 @@
 #include "DynamicUIButton.h"
 
-DynamicUIButton::DynamicUIButton() : UIButton() {}
+DynamicUIButton::DynamicUIButton() : StaticUIButton() {}
 
 
 void DynamicUIButton::set_base_texture(const std::string &texture_path) {
@@ -46,11 +46,21 @@ void DynamicUIButton::set_position(Vector2f position) {
 void DynamicUIButton::hover() noexcept {
     if (this->is_mouse_over_shape()) {
         if (!this->pressed) {
-            this->shape->setTexture(&(*this->hover_texture));
+            if (this->hover_texture) {
+                this->shape->setTexture(&(*this->hover_texture));
+            } else if (this->hover_color) {
+                this->shape->setFillColor(*this->hover_color);
+            }
+
             this->hovered = true;
         }
     } else {
-        this->shape->setTexture(&(*this->base_texture));
+        if (this->base_texture) {
+            this->shape->setTexture(&(*this->base_texture));
+        } else if (this->base_color) {
+            this->shape->setFillColor(*this->base_color);
+        }
+
         this->hovered = false;
         this->pressed = false;
     }
@@ -59,7 +69,13 @@ void DynamicUIButton::hover() noexcept {
 
 void DynamicUIButton::press() noexcept {
     if (this->hovered) {
-        this->shape->setTexture(&(*this->press_texture));
+        if (this->press_texture) {
+            this->shape->setTexture(&(*this->press_texture));
+        } else if (this->press_color) {
+            this->shape->setFillColor(*this->press_color);
+        }
+
+        this->execute();
         this->pressed = true;
     }
 }
@@ -68,10 +84,18 @@ void DynamicUIButton::press() noexcept {
 void DynamicUIButton::release() noexcept {
     if (this->hovered) {
         if (this->pressed) {
-            this->shape->setTexture(&(*this->hover_texture));
+            if (this->hover_texture) {
+                this->shape->setTexture(&(*this->hover_texture));
+            } else if (this->hover_color) {
+                this->shape->setFillColor(*this->hover_color);
+            }
         }
     } else {
-        this->shape->setTexture(&(*this->base_texture));
+        if (this->base_texture) {
+            this->shape->setTexture(&(*this->base_texture));
+        } else if (this->base_color) {
+            this->shape->setFillColor(*this->base_color);
+        }
     }
 
     this->pressed = false;

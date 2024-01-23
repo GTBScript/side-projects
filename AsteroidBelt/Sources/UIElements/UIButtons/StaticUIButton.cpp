@@ -2,8 +2,6 @@
 
 StaticUIButton::StaticUIButton() : UIButton() {
     this->base_color = std::make_unique<Color>(Color::White);
-    this->hover_color = std::make_unique<Color>(Color::White);
-    this->press_color = std::make_unique<Color>(Color::White);
 }
 
 
@@ -57,7 +55,10 @@ void StaticUIButton::set_position(Vector2f position) {
 void StaticUIButton::hover() noexcept {
     if (this->is_mouse_over_shape()) {
         if (!this->pressed) {
-            this->shape->setFillColor(*this->hover_color);
+            if (this->hover_color) {
+                this->shape->setFillColor(*this->hover_color);
+            }
+
             this->hovered = true;
         }
     } else {
@@ -87,4 +88,6 @@ void StaticUIButton::release() noexcept {
 
     this->pressed = false;
 }
+
+
 

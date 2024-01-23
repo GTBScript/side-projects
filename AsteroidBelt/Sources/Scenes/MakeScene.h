@@ -3,8 +3,10 @@
 #include "../UIElements/UIButtons/UIButton.h"
 #include "../UIElements/UIButtons/DynamicUIButton.h"
 #include "../UIElements/UIButtons/StaticUIButton.h"
-#include "../Includes.h"
+#include <memory>
+#include <SFML/Graphics.hpp>
 #include "Scene.h"
+#include "../UIElements/UIImages/UIImage.h"
 
 class MakeScene {
 public:

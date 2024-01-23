@@ -1,6 +1,5 @@
 #include "Scene.h"
 
-
 void Scene::set_background_music(const std::string & path) {
     if (!this->background_music) {
         this->background_music = std::make_unique<Music>();
@@ -11,6 +10,7 @@ void Scene::set_background_music(const std::string & path) {
     }
 
     this->background_music->setLoop(true);
+    this->background_music->setVolume(10.f);
 }
 
 
@@ -59,7 +59,7 @@ void Scene::set_animated_background(const std::string & path) {
 }
 
 
-void Scene::run_background() {
+void Scene::run_background(void) {
     if (!this->scene_clock) {
         this->scene_clock = std::make_unique<Clock>();
     }
@@ -79,7 +79,7 @@ void Scene::attach_window(RenderWindow & _window) {
 }
 
 
-void Scene::load() {
+void Scene::load(void) {
     if (!this->music_plays) {
         this->background_music->play();
         this->music_plays = true;
@@ -87,16 +87,48 @@ void Scene::load() {
 
     this->run_background();
 
-    for (UIButton *& button : this->buttons) {
+    for (const std::unique_ptr<UIButton> & button : this->buttons) {
         button->draw();
     }
 
-    for (Text & label : this->labels) {
+    for (const std::unique_ptr<UIImage> & image : this->images) {
+        image->draw();
+    }
+
+    for (const Text & label : this->labels) {
         this->window->draw(label);
     }
 }
 
-
 void Scene::exit() {
 
 }
+
+void Scene::add_button(std::unique_ptr<UIButton> & button) {
+    this->buttons.emplace_back(std::move(button));
+}
+
+
+void Scene::hover(void) {
+    for (auto & button : this->buttons) {
+        button->hover();
+    }
+}
+
+void Scene::press(void) {
+    for (auto & button : this->buttons) {
+        button->press();
+    }
+}
+
+void Scene::release(void) {
+    for (auto & button : this->buttons) {
+        button->release();
+    }
+}
+
+void Scene::add_image(std::unique_ptr<UIImage> & texture) {
+    this->images.emplace_back(std::move(texture));
+}
+
+

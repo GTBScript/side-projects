@@ -18,8 +18,8 @@ void Actions::play_sound(Sound * sound) noexcept {
 
 void Actions::none() noexcept {}
 
-void Actions::close(RenderWindow * window) {
-    window->close();
+void Actions::close(RenderWindow & window) {
+    window.close();
 }
 
 void Actions::load_main_menu_logo(Texture & texture) {

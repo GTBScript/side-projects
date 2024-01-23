@@ -7,7 +7,7 @@ namespace Actions {
     extern void disable_sounds() noexcept;
     extern void play_sound(Sound * sound) noexcept;
     extern void none() noexcept;
-    extern void close(RenderWindow * window);
+    extern void close(RenderWindow & window);
     extern void load_main_menu_logo(Texture & texture);
     extern void load_main_menu_music(Music * music);
     extern void load_scene();
