@@ -4,6 +4,8 @@
 #include "UIElements/UIButtons/DynamicUIButton.h"
 #include "Scenes/Scene.h"
 #include "Scenes/MakeScene.h"
+#include "Internal.h"
+#include "Actions.h"
 
 
 int main() {
@@ -15,9 +17,11 @@ int main() {
     }
     window.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
 
-    std::stack<std::unique_ptr<Scene>> scene_focus;
+    std::unique_ptr<Music> background_music = std::make_unique<Music>();
+    Actions::set_music(background_music, "../../Audio/Music/MainTheme.mp3");
+    background_music->play();
 
-    scene_focus.emplace(MakeScene::MakeMenu(window));
+    Internal::__SCENE_FOCUS__.emplace(MakeScene::MakeMenu(window));
 
     while (window.isOpen()) {
         Event event {};
@@ -29,15 +33,15 @@ int main() {
                     break;
 
                 case Event::MouseMoved:
-                    scene_focus.top()->hover();
+                    Internal::__SCENE_FOCUS__.top()->hover();
                     break;
 
                 case Event::MouseButtonPressed:
-                    scene_focus.top()->press();
+                    Internal::__SCENE_FOCUS__.top()->press();
                     break;
 
                 case Event::MouseButtonReleased:
-                    scene_focus.top()->release();
+                    Internal::__SCENE_FOCUS__.top()->release();
                     break;
 
                 default:
@@ -46,7 +50,7 @@ int main() {
         }
 
         window.clear(Color::Black);
-        scene_focus.top()->load();
+        Internal::__SCENE_FOCUS__.top()->load();
         window.display();
     }
 

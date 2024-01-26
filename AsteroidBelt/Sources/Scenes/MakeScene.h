@@ -11,6 +11,7 @@
 class MakeScene {
 public:
     static std::unique_ptr<Scene> MakeMenu(RenderWindow & window);
+    static std::unique_ptr<Scene> MakeOptions(RenderWindow & window);
 };
 
 

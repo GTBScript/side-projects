@@ -20,7 +20,6 @@ protected:
     std::vector<Texture> background_gif;
     std::list<Text> labels;
 
-    std::unique_ptr<Music>          background_music = nullptr;
     std::unique_ptr<Texture>        background_image = nullptr;
     std::unique_ptr<SoundBuffer>    sound_buffer = nullptr;
     std::unique_ptr<Sprite>         sprite = nullptr;
@@ -36,7 +35,6 @@ public:
     void hover();
     void press();
     void release();
-    void set_background_music(const std::string & path);
     void set_background_image(const std::string & path);
     void set_animated_background(const std::string & path);
     void attach_window(RenderWindow & _window);

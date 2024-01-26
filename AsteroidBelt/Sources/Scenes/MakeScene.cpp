@@ -5,7 +5,6 @@ std::unique_ptr<Scene> MakeScene::MakeMenu(RenderWindow & window) {
     std::unique_ptr<Scene> menu = std::make_unique<Scene>();
     menu->attach_window(window);
     menu->set_animated_background("../../Pictures/MainMenuBackground/bckg-");
-    menu->set_background_music("../../Audio/Music/MainTheme.mp3");
 
     std::unique_ptr<UIButton> start = std::make_unique<DynamicUIButton>();
     start->assign_window(window);
@@ -43,9 +42,19 @@ std::unique_ptr<Scene> MakeScene::MakeMenu(RenderWindow & window) {
 
     menu->add_image(img1);
 
-
-
-
     return menu;
 }
+
+std::unique_ptr<Scene> MakeScene::MakeOptions(RenderWindow & window) {
+    std::unique_ptr<Scene> options = std::make_unique<Scene>();
+    options->attach_window(window);
+
+
+
+
+    return std::unique_ptr<Scene>();
+}
+
+
+
 
