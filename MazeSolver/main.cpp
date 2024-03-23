@@ -182,7 +182,6 @@ void Maze::explore_cell(Maze::Cell * cell, size_t step) {    // Piece of sh... g
                 std::lock_guard<std::mutex> lock (this->mtx2);
 
                 this->threads.emplace(&Maze::explore_cell, this, neighbors.front(), step + 1); // Creating a new thread.
-                this->threads_used++;       // Increment the amount of threads used
                 neighbors.pop();
             }
         }
@@ -197,7 +196,7 @@ void Maze::explore() {
 
     this->map[this->sy][this->sx].visited = true;
     this->threads.emplace(&Maze::explore_cell, this, &this->map[this->sy][this->sx], 1); // Creating a thread to start the exploration
-    this->threads_used++;
+    this->threads_used = 1;
 
     while (!this->threads.empty()) {    // A loop used to monitor the created threads and stop them if the job is done
         if (this->threads.front().joinable()) { // Check if the thread is ready to be finished
@@ -217,6 +216,10 @@ void Maze::explore() {
 #ifdef __THREAD_LOG_ACTIVE__
             std::cout << CYAN << "Thread: " << d << " joins...\n" << RESET;
 #endif
+        }
+
+        if (this->threads_used < this->threads.size()) {
+            this->threads_used = this->threads.size();
         }
     }
 
