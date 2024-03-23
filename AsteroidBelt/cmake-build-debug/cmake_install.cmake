@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt
+# Install script for directory: C:/Users/Emkave/Desktop/Git/side-projects/AsteroidBelt
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,20 +34,20 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/mingw32/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "D:/CLion 2023.3.4/bin/mingw/bin/objdump.exe")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-build/cmake_install.cmake")
+  include("C:/Users/Emkave/Desktop/Git/side-projects/AsteroidBelt/cmake-build-debug/_deps/sfml-build/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/bin/AsteroidBelt.exe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "C:/Users/Emkave/Desktop/Git/side-projects/AsteroidBelt/cmake-build-debug/bin/AsteroidBelt.exe")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/AsteroidBelt.exe" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/AsteroidBelt.exe")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "C:/mingw32/bin/strip.exe" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/AsteroidBelt.exe")
+      execute_process(COMMAND "D:/CLion 2023.3.4/bin/mingw/bin/strip.exe" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/AsteroidBelt.exe")
     endif()
   endif()
 endif()
@@ -60,5 +60,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Emkave/Desktop/Git/side-projects/AsteroidBelt/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

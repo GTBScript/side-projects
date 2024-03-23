@@ -1,4 +1,4 @@
-set(CMAKE_C_COMPILER "C:/mingw32/bin/gcc.exe")
+set(CMAKE_C_COMPILER "D:/CLion 2023.3.4/bin/mingw/bin/gcc.exe")
 set(CMAKE_C_COMPILER_ARG1 "")
 set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_C_COMPILER_VERSION "13.1.0")
@@ -21,11 +21,11 @@ set(CMAKE_C_SIMULATE_VERSION "")
 
 
 
-set(CMAKE_AR "C:/mingw32/bin/ar.exe")
-set(CMAKE_C_COMPILER_AR "C:/mingw32/bin/gcc-ar.exe")
-set(CMAKE_RANLIB "C:/mingw32/bin/ranlib.exe")
-set(CMAKE_C_COMPILER_RANLIB "C:/mingw32/bin/gcc-ranlib.exe")
-set(CMAKE_LINKER "C:/mingw32/bin/ld.exe")
+set(CMAKE_AR "D:/CLion 2023.3.4/bin/mingw/bin/ar.exe")
+set(CMAKE_C_COMPILER_AR "D:/CLion 2023.3.4/bin/mingw/bin/gcc-ar.exe")
+set(CMAKE_RANLIB "D:/CLion 2023.3.4/bin/mingw/bin/ranlib.exe")
+set(CMAKE_C_COMPILER_RANLIB "D:/CLion 2023.3.4/bin/mingw/bin/gcc-ranlib.exe")
+set(CMAKE_LINKER "D:/CLion 2023.3.4/bin/mingw/bin/ld.exe")
 set(CMAKE_MT "")
 set(CMAKE_TAPI "CMAKE_TAPI-NOTFOUND")
 set(CMAKE_COMPILER_IS_GNUCC 1)
@@ -42,7 +42,7 @@ set(CMAKE_C_LINKER_PREFERENCE 10)
 set(CMAKE_C_LINKER_DEPFILE_SUPPORTED TRUE)
 
 # Save compiler ABI information.
-set(CMAKE_C_SIZEOF_DATA_PTR "4")
+set(CMAKE_C_SIZEOF_DATA_PTR "8")
 set(CMAKE_C_COMPILER_ABI "")
 set(CMAKE_C_BYTE_ORDER "LITTLE_ENDIAN")
 set(CMAKE_C_LIBRARY_ARCHITECTURE "")
@@ -68,7 +68,7 @@ endif()
 
 
 
-set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "C:/mingw32/lib/gcc/i686-w64-mingw32/13.1.0/include;C:/mingw32/include;C:/mingw32/lib/gcc/i686-w64-mingw32/13.1.0/include-fixed;C:/mingw32/i686-w64-mingw32/include")
-set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "mingw32;gcc;moldname;mingwex;kernel32;pthread;advapi32;shell32;user32;kernel32;mingw32;gcc;moldname;mingwex;kernel32")
-set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "C:/mingw32/lib/gcc/i686-w64-mingw32/13.1.0;C:/mingw32/lib/gcc;C:/mingw32/i686-w64-mingw32/lib;C:/mingw32/lib")
+set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "D:/CLion 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include;D:/CLion 2023.3.4/bin/mingw/include;D:/CLion 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed;D:/CLion 2023.3.4/bin/mingw/x86_64-w64-mingw32/include")
+set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "")
+set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

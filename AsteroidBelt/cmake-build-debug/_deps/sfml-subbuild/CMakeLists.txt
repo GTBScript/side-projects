@@ -19,17 +19,17 @@ project(sfml-populate NONE)
 # Pass through things we've already detected in the main project to avoid
 # paying the cost of redetecting them again in ExternalProject_Add()
 set(GIT_EXECUTABLE [==[C:/Program Files/Git/cmd/git.exe]==])
-set(GIT_VERSION_STRING [==[2.43.0.windows.1]==])
+set(GIT_VERSION_STRING [==[2.44.0.windows.1]==])
 set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
-  [==[C:/Program Files/Git/cmd/git.exe;2.43.0.windows.1]==]
+  [==[C:/Program Files/Git/cmd/git.exe;2.44.0.windows.1]==]
 )
 
 
 include(ExternalProject)
 ExternalProject_Add(sfml-populate
                      "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/SFML/SFML.git" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR" "GIT_TAG" "2.6.x"
-                    SOURCE_DIR          "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src"
-                    BINARY_DIR          "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-build"
+                    SOURCE_DIR          "C:/Users/Emkave/Desktop/Git/side-projects/AsteroidBelt/cmake-build-debug/_deps/sfml-src"
+                    BINARY_DIR          "C:/Users/Emkave/Desktop/Git/side-projects/AsteroidBelt/cmake-build-debug/_deps/sfml-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

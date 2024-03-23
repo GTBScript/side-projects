@@ -4,19 +4,19 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-src"
-  "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-build"
-  "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix"
-  "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/tmp"
-  "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp"
-  "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src"
-  "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp"
+  "C:/Users/Emkave/Desktop/Git/side-projects/AsteroidBelt/cmake-build-debug/_deps/sfml-src"
+  "C:/Users/Emkave/Desktop/Git/side-projects/AsteroidBelt/cmake-build-debug/_deps/sfml-build"
+  "C:/Users/Emkave/Desktop/Git/side-projects/AsteroidBelt/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix"
+  "C:/Users/Emkave/Desktop/Git/side-projects/AsteroidBelt/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/tmp"
+  "C:/Users/Emkave/Desktop/Git/side-projects/AsteroidBelt/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp"
+  "C:/Users/Emkave/Desktop/Git/side-projects/AsteroidBelt/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src"
+  "C:/Users/Emkave/Desktop/Git/side-projects/AsteroidBelt/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/${subDir}")
+    file(MAKE_DIRECTORY "C:/Users/Emkave/Desktop/Git/side-projects/AsteroidBelt/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "C:/Users/rcybe/CLionProjects/AsteroidBelt/AsteroidBelt/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "C:/Users/Emkave/Desktop/Git/side-projects/AsteroidBelt/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp${cfgdir}") # cfgdir has leading slash
 endif()
