@@ -7,9 +7,15 @@
 #include <cstdlib>
 #include <unistd.h>
 #include <array>
+#include <functional>
+#include <condition_variable>
 #include <mutex>
 #include <vector>
-#if defined(__linux__) || defined(__ARM_ARCH) || defined(__aarch64__) || defined(_M_ARM) || defined(_M_ARM64) || defined(__APPLE__) || defined(__MACH__)
+#if defined(__linux__)
+#include <pthread.h>
+#endif
+#if defined(__ARM_ARCH) || defined(__aarch64__) || defined(_M_ARM) || defined(_M_ARM64) || defined(__APPLE__) || defined(__MACH__)
+#include <mach/mach_host.h>
 #include <pthread.h>
 #endif
 #include <memory>
@@ -19,7 +25,6 @@
 #include <unordered_map>
 #ifdef _WIN32
 #include <windows.h>
-#include <intrin.h>
 #endif
 #define RED "\x1B[31m"
 #define GREEN "\x1B[32m"
@@ -27,10 +32,10 @@
 #define CYAN "\x1B[36m"
 #define RESET "\033[0m"
 
-std::atomic<bool> emergency_exit_protocol = false;  // Some kind of a register but not really used for monitoring the threads so far
+class ThreadPool;
 
 class Maze {        // Class for the maze
-private:
+public:
     typedef struct Cell {   // Defining the structure for a cell
         __SIZE_TYPE__ x;    // Coordinates
         __SIZE_TYPE__ y;
@@ -49,9 +54,9 @@ private:
         bool shortest = false; // A cell that is a part of a shortest path
     } Cell;
 
-    void explore(void);         // Exploration function wrapper
+private:
+    void explore(size_t max_threads);         // Exploration function wrapper
     void explore_cell(Maze::Cell * cell, size_t step); // The place where the magic begins
-    void make_adjacent(void) noexcept;       // Adjacency list maker for the maze (thks to my BIE-AG1 courses)
 
     std::unordered_map<Maze::Cell *, std::vector<Cell *>> adjacency_list;       //An address of a cell is a key pointing to the vector of addresses of each cells (helps to avoid copies, efficient memory management)
     std::vector<std::vector<Maze::Cell>> map;                                   // The 'map' where the cells are stored
@@ -63,20 +68,116 @@ private:
 
     std::atomic<unsigned> nends = 0; // Atomic type allows to use the variable by multiple variables without any problems. nends - number of ends in the maze
     Cell * shortest = nullptr;          // A pointer to the shortest cell
-    std::atomic<size_t> threads_used = 0;   // self-explanatory
-    std::atomic<size_t> mnthreads = 0;  // max number of threads
 
-    std::mutex mtx;     // Mutexes used to lock the sections of the code where a race of threads may bring a problems when they try to work with a shared stuff
-    std::mutex mtx1;
-    std::mutex mtx2;
-    std::mutex mtx3;
-    std::queue<std::thread> threads;        // queue of threads
 public:
     explicit Maze(std::ifstream & file);      // definition of explicit constructor of the class
     void search() noexcept;                   // definition of the search function
     inline void print(void) const noexcept;     // definition of inline print function
+    inline void make_adjacent(void) noexcept;
+
+    ThreadPool * pool = nullptr;
+    std::mutex mtx1, mtx2, mtx3, mtx4;
+};
+
+
+class ThreadPool {      // Definition of the custom thread pool for the maze search
+public:
+    explicit ThreadPool(size_t threads, unsigned ends) {       // Explicit constructor that accepts max number of threads allowed to create.
+        this->ends = ends;
+        this->max_threads = threads;
+    };
+
+    ~ThreadPool();                      // Destructor
+
+    void enqueue(const std::function<void()>& task);        // Defintion of the function that enques tasks for the threads
+    void start_worker();                                    // Defintion of the function that starts a thread with a task
+    void wait_until_done();                                 // Defintion of the function where the main thread waits untill all of the job is done.
+    std::atomic<unsigned> n_threads = 0;                    // Atomic variable to control the amount of threads created.
+    std::atomic<unsigned> ends = 0;
+
+private:
+    std::vector<std::thread> workers;                       // Defintion of the vector of the threads to store so I could join one by one later.
+    std::queue<std::function<void()>> tasks;                // Queue of tasks to do
+
+    std::mutex wait_mutex;                                  // Mutexes to prevent race conditions
+    std::mutex work_mutex;
+    std::mutex enqueue_mutex;
+
+    size_t max_threads;                                     // Basically a constant that limits the amount of threads to create
+
+    std::condition_variable tasks_done;                    // cond. variable used for signalling the main thread about the end of the job
 
 };
+
+
+ThreadPool::~ThreadPool() {                                     // Destruction of the class objects and the threads
+    for (std::thread & worker : this->workers) {
+        if (worker.joinable()) {
+            worker.join();
+        }
+    }
+}
+
+
+void ThreadPool::wait_until_done() {                        // Definition of function where the main thread stucks
+    std::unique_lock<std::mutex> lock (this->wait_mutex);
+    this->tasks_done.wait(lock, [this]{return !this->n_threads;});      // Wait untill there are no threads running anymore.
+}
+
+
+void ThreadPool::start_worker() {                                       // The function where we emplace the newly created thread with assigned anonymous function
+    this->workers.emplace_back([this] {
+        std::function<void()> task;                                     // Static object of function
+        {
+            std::lock_guard<std::mutex> lock (this->work_mutex);        // Lock guard because accessing shared memory
+
+            task = std::move(this->tasks.front());          // Assign an anonymous function to the task
+            this->tasks.pop();
+        }
+
+        task();             // The thread proceeds to execute the assigned anonymous function.
+
+        this->n_threads--;      // After completion we decrement the active threads
+
+        if (!this->n_threads) {
+            this->tasks_done.notify_all();      // Check if the threads are done, then we ask the main thread to stop waiting and proceed
+        }
+        return;             // The thread finsihes here.
+    });
+}
+
+
+void ThreadPool::enqueue(const std::function<void()> & task) {      // Function to enque the task and call a worker
+    this->enqueue_mutex.lock();                             // Mutex is locked to prevent race condition
+    if (this->n_threads < this->max_threads && this->ends) {// Check if we are not exceeding max allowed threads
+        this->tasks.emplace(task);                          // Emplacing a function into the queue
+        this->n_threads++;                                  // Incrementing the threads used
+        this->start_worker();                               // Calling a thread to execute the function
+    }
+    this->enqueue_mutex.unlock();
+}
+
+
+void Maze::explore_cell(Maze::Cell * cell, size_t step) {    // Piece of sh... good work
+    Cell * cell__ = cell;
+
+    for (Cell * neighbor : this->adjacency_list[cell__]) {      // A thread will check the adjacent cells, basically the recursive DFS.
+        std::lock_guard<std::mutex> lock (this->mtx2);
+        if (!neighbor->visited) {
+            neighbor->visited = true;
+            neighbor->parent = cell__;
+
+            if (neighbor->type == 'F') {
+                this->pool->ends--;
+                this->ends.emplace_back(step, neighbor);
+            }
+
+            Cell * s_cell = neighbor;
+            auto explore_task = [this, s_cell, step]() {this->explore_cell(s_cell, step + 1);};     // We create a lambda function as an entity and pass it to the pool
+            this->pool->enqueue(explore_task);
+        }
+    }
+}
 
 
 Maze::Maze(std::ifstream & file) {  // Class constructor
@@ -134,109 +235,40 @@ Maze::Maze(std::ifstream & file) {  // Class constructor
     if (!start_exists) {    // Same thing
         throw std::runtime_error("Start point doesn't exist.");
     }
+
+    this->make_adjacent();
 }
 
 
-void Maze::explore_cell(Maze::Cell * cell, size_t step) {    // Piece of sh... good work
-    if (emergency_exit_protocol) {  // Checking if we need to terminate it asap
-        return;
-    }
+void Maze::explore(const size_t max_threads) {
+    this->pool = new ThreadPool(max_threads, this->nends);       // Initialize the thread pool with the max number of threads allowed
 
-    if (this->threads_used >= this->mnthreads) { // Check if we made too much threads (very unlikely to happen (most likely))
-        std::cout << RED << "ALERT! The amount of threads created exceeds the system's capabilities.\nEmergency shutdown...\n";
-        emergency_exit_protocol = true;
-        return;
-    }
+    this->map[this->sy][this->sx].visited = true;       // By default, the starting point is the visited one.
+    Cell * start_cell = &this->map[this->sy][this->sx];
 
-    Cell * cell__ = cell;
+    auto explore_task = [this, start_cell]() {      // Creating a lambda function and pass to the pool
+        this->explore_cell(start_cell, 1);
+    };
 
-    while (this->nends) {   // While all ends are not found. the cycle of a weird multithreaded dfs
-        std::queue<Cell *> neighbors;
-
-        for (Cell * neighbor : this->adjacency_list[cell__]) {  // List all adjacent vertices
-            {
-                std::lock_guard<std::mutex> lock (this->mtx1);  // The lock of the critical region. Assume as an atomic for a code section
-
-                if (!neighbor->visited) {       // This code accesses elements outside, soo we need to make sure that multiple threads access a single element will be OK
-                    neighbor->visited = true;
-                    neighbor->parent = cell__;
-                    neighbors.emplace(neighbor);
-                }
-            }
-        }
-
-        if (!neighbors.empty() && neighbors.back()->type == 'F') {  // Check if the cell is a finish
-            {
-                std::lock_guard<std::mutex> lock (this->mtx3);
-                this->ends.emplace_back(step, neighbors.back());    // Emplace the end cell pointer to the vector
-            }
-            this->nends--;  // Decreasaing the amount of ends we need to find
-        }
-
-        if (neighbors.empty()) {    // In case if no adjacent cells found, stop to avoid dead infinite loop
-            return;
-        }
-
-        while (neighbors.size() > 1) { // An optimization to avoid the creation of unnecessary threads. The same thread can be used to explore if there is 1 adjacent unassigned thread left
-            {
-                std::lock_guard<std::mutex> lock (this->mtx2);
-
-                this->threads.emplace(&Maze::explore_cell, this, neighbors.front(), step + 1); // Creating a new thread.
-                neighbors.pop();
-            }
-        }
-
-        cell__ = neighbors.back();  // Continuing the exploration of the last cell by this thread
-        step++; // Incrementing a step (this is used for a late search for the shortest path)
-    }
-}
-
-
-void Maze::explore() {
-
-    this->map[this->sy][this->sx].visited = true;
-    this->threads.emplace(&Maze::explore_cell, this, &this->map[this->sy][this->sx], 1); // Creating a thread to start the exploration
-    this->threads_used = 1;
-
-    while (!this->threads.empty()) {    // A loop used to monitor the created threads and stop them if the job is done
-        if (this->threads.front().joinable()) { // Check if the thread is ready to be finished
-            {
-                std::lock_guard<std::mutex> lock (this->mtx);
-
-#ifdef __THREAD_LOG_ACTIVE__    // Used to monitor the threads
-                std::cout << CYAN << "Thread: " << this->threads.front().get_id() << " waiting to finish.\n" << RESET;
-#endif
-            }
-
-#ifdef __THREAD_LOG_ACTIVE__
-            auto d = this->threads.front().get_id();
-#endif
-            this->threads.front().join();   // Finish the thread
-            this->threads.pop();    // Delete from the queue dead thread
-#ifdef __THREAD_LOG_ACTIVE__
-            std::cout << CYAN << "Thread: " << d << " joins...\n" << RESET;
-#endif
-        }
-
-        if (this->threads_used < this->threads.size()) {
-            this->threads_used = this->threads.size();
-        }
-    }
+    this->pool->enqueue(explore_task);
+    this->pool->wait_until_done();              // The main thread goes here and sleeps untill the thread pool makes the job done
+    delete this->pool;                          // Destroying the pool
 
     size_t sh = __SIZE_MAX__;   // This part of the code is responsible for detecting the shortest path
 
-    for (auto & cell : this->ends) {
+    for (auto & cell : this->ends) {        // We find the path that had the least steps ever
         if (cell.first < sh) {
             sh = cell.first;
             this->shortest = cell.second;
         }
     }
 
-    for (auto cell : this->ends) {  // This is used to mark the visited, valid, and shortest cells
+    /// BACKTRACK MECHANISM
+    for (auto cell : this->ends) {  // This is used to mark the visited, valid, and shortest cells.
         Maze::Cell * end_cell = cell.second;
 
         while (end_cell) {
-            if (end_cell == this->shortest) {
+            if (end_cell == this->shortest) {   // If the cell is a part of the shortest path, we mark it differently
                 while (end_cell) {
                     end_cell->shortest = true;
                     end_cell = end_cell->parent;
@@ -272,60 +304,7 @@ inline void Maze::print(void) const noexcept {      // Used to print the maze
 }
 
 
-void Maze::search() noexcept {
-    std::cout << "Starting the search...\n";
-    std::cout << RESET << "Searching the path...\n";
-
-#ifdef _WIN32   // Section used to calculate the amount of threads this app can create.
-    MEMORYSTATUSEX mem_info;
-    mem_info.dwLength = sizeof(MEMORYSTATUSEX);
-    GlobalMemoryStatusEx(&mem_info);
-
-    SIZE_T total_memory = mem_info.ullTotalPhys / (1024 * 1024);
-    SIZE_T available_memory = mem_info.ullAvailPhys / (1024 * 1024);
-    SIZE_T default_stack_size = 1 << 20;
-    SIZE_T max_threads = available_memory * (1024 * 1024) / default_stack_size;
-    this->mnthreads = max_threads;
-
-    std::cout << CYAN << "Total system memory: " << total_memory << " MB.\n";
-    std::cout << "Available memory: " << available_memory << " MB.\n";
-    std::cout << "Assumed default thread stack size: " << default_stack_size / 1024 << " KB.\n";
-    std::cout << "Estimated maximum number of threads available: " << max_threads << RESET << std::endl;
-#elif defined(__linux__) || defined(__ARM_ARCH) || defined(__aarch64__) || defined(_M_ARM) || defined(_M_ARM64) || defined(__APPLE__) || defined(__MACH__) // Same but for linux and MacOS
-    long page_size = sysconf(_SC_PAGESIZE);
-    long num_pages = sysconf(_SC_PHYS_PAGES);
-    long available_pages = sysconf(_SC_AVPHYS_PAGES);
-    __SIZE_TYPE__ total_memory = page_size * num_pages;
-    __SIZE_TYPE__ available_memory = page_size * available_pages;
-    pthread_attr_t attr;
-    __SIZE_TYPE__ stack_size;
-    pthread_attr_init(&attr);
-    pthread_attr_getstacksize(&attr, &stack_size);
-
-    std::cout << CYAN << "Total system memory: " << total_memory / (1024 * 1024) << " MB.\n";
-    std::cout << "Available memory: " << available_memory / (1024 * 1024) << " MB.\n";
-    std::cout << "Default thread stack size: " << stack_size / 1024 << " KB.\n";
-
-    __SIZE_TYPE__ max_threads = available_memory / stack_size;
-    std::cout << "Estimated maximum number of threads: " << max_threads << std::endl << RESET;
-    this->mnthreads = max_threads;
-    pthread_attr_destroy(&attr);
-#endif
-
-    sleep(1);
-    this->make_adjacent();
-    this->explore();    // Starting the exploration
-
-    if (emergency_exit_protocol) {  // In case of smth fatal, exit the app
-        exit(1);
-    }
-
-    std::cout << GREEN << "The paths have been contructed successfully.\n";
-    std::cout << GREEN << "Threads used: " << this->threads_used << RESET << std::endl;
-}
-
-
-void Maze::make_adjacent(void) noexcept {   // Creating an adjacency list
+inline void Maze::make_adjacent(void) noexcept {   // Creating an adjacency list
     for (__SIZE_TYPE__ i=0; i<this->map.size(); i++) {
         for (__SIZE_TYPE__ j=0; j<this->map[i].size(); j++) {
             if (this->map[i][j].type != '#') {
@@ -353,6 +332,111 @@ void Maze::make_adjacent(void) noexcept {   // Creating an adjacency list
             }
         }
     }
+}
+
+
+void Maze::search() noexcept {
+    std::cout << "Starting the search...\n";
+    std::cout << RESET << "Searching the path...\n";
+
+#ifdef _WIN32   // Section used to calculate the amount of threads this app can create.
+    MEMORYSTATUSEX mem_info;
+    mem_info.dwLength = sizeof(MEMORYSTATUSEX);
+    GlobalMemoryStatusEx(&mem_info);
+
+    SIZE_T total_memory = mem_info.ullTotalPhys / (1024 * 1024);
+    SIZE_T available_memory = mem_info.ullAvailPhys / (1024 * 1024);
+    SIZE_T default_stack_size = 1 << 20;
+    SIZE_T max_threads = available_memory * (1024 * 1024) / default_stack_size;
+
+    std::cout << CYAN << "Total system memory: " << total_memory << " MB.\n";
+    std::cout << "Available memory: " << available_memory << " MB.\n";
+    std::cout << "Assumed default thread stack size: " << default_stack_size / 1024 << " KB.\n";
+    std::cout << "Estimated maximum number of threads available: " << max_threads << RESET << std::endl;
+#elif defined(__linux__)
+    // Retrieve the size of a page in bytes.
+    long page_size = sysconf(_SC_PAGESIZE);
+    // Get the total number of pages in the physical memory.
+    long num_pages = sysconf(_SC_PHYS_PAGES);
+    // Get the number of available pages in the physical memory.
+    long available_pages = sysconf(_SC_AVPHYS_PAGES);
+    // Calculate total memory by multiplying page size with the number of pages.
+    __SIZE_TYPE__ total_memory = page_size * num_pages;
+    // Calculate available memory using page size and available pages.
+    __SIZE_TYPE__ available_memory = page_size * available_pages;
+    pthread_attr_t attr;
+    __SIZE_TYPE__ stack_size;
+    // Initialize thread attribute object.
+    pthread_attr_init(&attr);
+    // Get the default stack size for threads.
+    pthread_attr_getstacksize(&attr, &stack_size);
+
+    // Display total system memory in MB.
+    std::cout << CYAN << "Total system memory: " << total_memory / (1024 * 1024) << " MB.\n";
+    // Display available system memory in MB.
+    std::cout << "Available memory: " << available_memory / (1024 * 1024) << " MB.\n";
+    // Display default stack size for threads in KB.
+    std::cout << "Default thread stack size: " << stack_size / 1024 << " KB.\n";
+
+    // Estimate the maximum number of threads based on available memory and stack size.
+    __SIZE_TYPE__ max_threads = available_memory / stack_size;
+    std::cout << "Estimated maximum number of threads: " << max_threads << std::endl << RESET;
+    // Clean up thread attribute object.
+    pthread_attr_destroy(&attr);
+
+#elif defined(__ARM_ARCH) || defined(__aarch64__) || defined(_M_ARM) || defined(_M_ARM64) || defined(__APPLE__) || defined(__MACH__)
+    // Initialize variables for page size and the mach port.
+    vm_size_t page_size;
+    mach_port_t mach_port = mach_host_self();
+    vm_statistics64_data_t vm_stats;
+    // Set the count for the vm_statistics data.
+    mach_msg_type_number_t count = sizeof(vm_stats) / sizeof(natural_t);
+
+    // Retrieve the page size and memory statistics from the system.
+    if (host_page_size(mach_port, &page_size) == KERN_SUCCESS &&
+        host_statistics64(mach_port, HOST_VM_INFO, (host_info64_t)&vm_stats, &count) == KERN_SUCCESS) {
+        // Calculate free memory using the number of free pages and page size.
+        long long free_memory = static_cast<long long>(vm_stats.free_count) * static_cast<long long>(page_size);
+        // Calculate available memory (free + inactive pages).
+        long long available_memory = free_memory + static_cast<long long>(vm_stats.inactive_count) * static_cast<long long>(page_size);
+
+        pthread_attr_t attr;
+        // Initialize thread attribute object.
+        pthread_attr_init(&attr);
+        size_t stack_size;
+        // Get the default stack size for threads.
+        pthread_attr_getstacksize(&attr, &stack_size);
+        // Clean up thread attribute object.
+        pthread_attr_destroy(&attr);
+
+        // Display free and available memory in MB.
+        std::cout << CYAN << "Free memory: " << free_memory / (1024 * 1024) << " MB.\n";
+        std::cout << "Available memory: " << available_memory / (1024 * 1024) << " MB.\n";
+        // Display the default thread stack size in KB.
+        std::cout << "Default thread stack size: " << stack_size / 1024 << " KB.\n";
+
+        // Estimate the maximum number of threads based on available memory and stack size.
+        size_t max_threads = available_memory / stack_size;
+        std::cout << "Estimated maximum number of threads: " << max_threads << std::endl << RESET;
+
+    } else {
+        // If retrieving the system information fails, display an error.
+        std::cerr << "Failed to analyse RAM." << std::endl;
+        _Exit(1);
+    }
+#endif
+
+
+    sleep(1);
+
+    try {
+        this->explore(1000);    // Starting the exploration
+    } catch (std::system_error & exception) {
+        std::cout << RED << exception.what();
+    }
+
+
+    std::cout << GREEN << "The paths have been contructed successfully.\n";
 }
 
 
