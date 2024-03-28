@@ -392,6 +392,8 @@ void Maze::search() noexcept {
     // Set the count for the vm_statistics data.
     mach_msg_type_number_t count = sizeof(vm_stats) / sizeof(natural_t);
 
+    size_t max_threads = 0;
+
     // Retrieve the page size and memory statistics from the system.
     if (host_page_size(mach_port, &page_size) == KERN_SUCCESS &&
         host_statistics64(mach_port, HOST_VM_INFO, (host_info64_t)&vm_stats, &count) == KERN_SUCCESS) {
@@ -416,7 +418,7 @@ void Maze::search() noexcept {
         std::cout << "Default thread stack size: " << stack_size / 1024 << " KB.\n";
 
         // Estimate the maximum number of threads based on available memory and stack size.
-        size_t max_threads = available_memory / stack_size;
+        max_threads = available_memory / stack_size;
         std::cout << "Estimated maximum number of threads: " << max_threads << std::endl << RESET;
 
     } else {
@@ -430,7 +432,7 @@ void Maze::search() noexcept {
     sleep(1);
 
     try {
-        this->explore(1000);    // Starting the exploration
+        this->explore(max_threads);    // Starting the exploration
     } catch (std::system_error & exception) {
         std::cout << RED << exception.what();
     }
