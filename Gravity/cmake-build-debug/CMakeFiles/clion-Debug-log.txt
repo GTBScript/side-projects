@@ -1,4 +1,22 @@
-"D:\CLion 2023.3.4\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=D:/CLion 2023.3.4/bin/ninja/win/x64/ninja.exe" -G Ninja -S C:\Users\Emkave\CLionProjects\Gravity -B C:\Users\Emkave\CLionProjects\Gravity\cmake-build-debug
--- Configuring done (1.9s)
--- Generating done (0.1s)
--- Build files have been written to: C:/Users/Emkave/CLionProjects/Gravity/cmake-build-debug
+"D:\CLion 2023.3.4\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - NMake Makefiles" -S C:\Users\Emkave\Desktop\Git\side-projects\Gravity -B C:\Users\Emkave\Desktop\Git\side-projects\Gravity\cmake-build-debug
+CMake Deprecation Warning:
+  Support for "Extra Generators" like
+
+    CodeBlocks
+
+  is deprecated and will be removed from a future version of CMake.  IDEs may
+  use the cmake-file-api(7) to view CMake-generated project build trees.
+
+
+CMake Error: The current CMakeCache.txt directory C:/Users/Emkave/Desktop/Git/side-projects/Gravity/cmake-build-debug/_deps/sfml-subbuild/CMakeCache.txt is different than the directory c:/Users/Emkave/CLionProjects/Gravity/cmake-build-debug/_deps/sfml-subbuild where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt
+
+CMake Error at D:/CLion 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/FetchContent.cmake:1650 (message):
+  CMake step for sfml failed: 1
+Call Stack (most recent call first):
+  D:/CLion 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/FetchContent.cmake:1802:EVAL:2 (__FetchContent_directPopulate)
+  D:/CLion 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/FetchContent.cmake:1802 (cmake_language)
+  D:/CLion 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/FetchContent.cmake:2016 (FetchContent_Populate)
+  CMakeLists.txt:11 (FetchContent_MakeAvailable)
+
+
+-- Configuring incomplete, errors occurred!
